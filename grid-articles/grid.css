@@ -1,0 +1,66 @@
+.grid-layout {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'first'
+        'second'
+        'third'
+        'fourth'
+        'five';
+    padding-block: 2rem;
+    width: min(95%, 75rem);
+    margin-inline: auto;
+}
+
+.block {
+    padding: 2rem;
+}
+
+.article-1 {
+    background: hsl(263 25% 62%);
+    grid-area: first;
+}
+.article-2 {
+    background: hsl(163 25% 62%);
+    grid-area: second;
+}
+.article-3 {
+    background: hsl(73 15% 82%);
+    grid-area: third;
+}
+.article-4 {
+    background: hsl(193 25% 62%);
+    grid-area: fourth;
+}
+.article-5 {
+    background: hsl(213 25% 62%);
+    grid-area: five;
+}
+
+@media screen and (min-width: 39em) {
+    .grid-layout {
+        grid-template-areas:
+            'first first'
+            'second five'
+            'third five'
+            'fourth fourth';
+    }
+}
+
+@media screen and (min-width: 55em) {
+    .grid-layout {
+        grid-template-areas:
+            'first first second'
+            'five five five'
+            'third fourth fourth';
+    }
+}
+
+@media screen and (min-width: 77em) {
+    .grid-layout {
+        grid-template-areas:
+            'first first second five'
+            'third fourth fourth five';
+    }
+}
