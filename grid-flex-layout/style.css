@@ -2,7 +2,9 @@
 *,
 *::before,
 *::after {
+    font-size: 1.2rem;
     box-sizing: border-box;
+    margin-top: 0;
 }
 
 /* Remove default margin */
@@ -19,12 +21,6 @@ dd {
     margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
-}
-
 /* Set core root defaults */
 html:focus-within {
     scroll-behavior: smooth;
@@ -35,11 +31,6 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-    text-decoration-skip-ink: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -64,4 +55,11 @@ select {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+header,
+.main-content,
+.sidebar,
+footer {
+    padding: 2em;
 }

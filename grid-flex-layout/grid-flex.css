@@ -1,0 +1,105 @@
+body {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'header'
+        'main'
+        'main'
+        'main'
+        'main'
+        'main'
+        'side'
+        'footer';
+    padding-block: 1.5rem;
+    width: min(98%);
+    margin-inline: auto;
+}
+
+header {
+    background: hsl(263 25% 62%);
+    grid-area: header;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+.main-content {
+    background: hsl(193 25% 62%);
+    grid-area: main;
+    display: flex;
+    gap: 3em;
+    flex-direction: column;
+}
+.sidebar {
+    background: hsl(213 25% 62%);
+    grid-area: side;
+    display: flex;
+}
+footer {
+    background: hsl(263 25% 62%);
+    grid-area: footer;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+@media only screen and (min-width: 49em) {
+    body {
+        grid-template-areas:
+            'header header header'
+            'header header header'
+            'main main side'
+            'main main side'
+            'main main side'
+            'main main side'
+            'main main side'
+            'footer footer footer';
+    }
+    header {
+        flex-direction: row;
+        gap: 10em;
+    }
+    .main-content {
+        flex-direction: row;
+        gap: 5em;
+    }
+    .main-content p:first-child {
+        align-self: flex-end;
+    }
+    footer {
+        flex-direction: row;
+        gap: 5em;
+    }
+}
+
+@media only screen and (min-width: 77em) {
+    body {
+        grid-template-areas:
+            'header header header header header'
+            'header header header header header'
+            'main main main main side'
+            'main main main main side'
+            'main main main main side'
+            'main main main main side'
+            'main main main main side'
+            'footer footer footer footer side';
+    }
+    header {
+        justify-content: space-evenly;
+    }
+    header p:last-child {
+        align-self: flex-end;
+    }
+    .main-content {
+        justify-content: space-evenly;
+    }
+    .main-content p:first-child {
+        align-self: flex-end;
+    }
+    .sidebar {
+        align-items: center;
+    }
+    footer {
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+}
