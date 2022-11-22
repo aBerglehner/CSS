@@ -111,7 +111,6 @@ body {
     margin-left: auto;
     border: none;
     outline: none;
-    /* background: #ff652f; */
     background: var(--clr-login);
     font-size: 1rem;
     text-transform: uppercase;
