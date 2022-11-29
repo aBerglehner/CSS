@@ -111,6 +111,21 @@ span {
     box-shadow: 0 20px 15px -4px rgb(0 0 0 / 0.1);
 }
 
+.link-container a:hover {
+    background-color: rgb(129 140 248);
+    transform: translateY(-2px);
+    transition-duration: 150ms;
+}
+
+.link-container a:focus {
+    outline: 3px solid rgb(99, 102, 241, 0.5);
+    outline-offset: 2px;
+}
+
+.link-container a:active {
+    background-color: rgb(79 70 229);
+}
+
 @media screen and (min-width: 640px) {
     .inner-container {
         max-width: 36rem;
