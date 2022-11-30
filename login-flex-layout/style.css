@@ -6,6 +6,8 @@ Variables
 
 :root {
     --clr-login: rgb(177, 202, 218);
+    --clr-login-hover: rgb(197, 240, 220);
+    --clr-login-active: rgb(157, 170, 208);
     --clr-white: rgb(249, 249, 249);
     --transition: all 0.3s ease;
     --transition-long: all 0.3s ease;
@@ -30,8 +32,7 @@ body {
 
 body::after {
     content: '';
-    background: url('https://wallpaperforu.com/wp-content/uploads/2020/08/minimal-wallpaper-20081414183045.jpg')
-        no-repeat center;
+    background: url('./img/bg.jpg') no-repeat center;
     background-size: cover;
     opacity: 0.8;
     top: 0;
@@ -130,6 +131,18 @@ body::after {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: var(--clr-login-hover);
+    transform: translateY(-2px);
+    transition-duration: 150ms;
+}
+.submit-btn:focus {
+    outline: 2px solid rgb(177, 202, 218, 0.5);
+    outline-offset: 2px;
+}
+.submit-btn:active {
+    background-color: var(--clr-login-active);
 }
 .forgot-pw {
     color: inherit;
