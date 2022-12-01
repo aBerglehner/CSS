@@ -1,0 +1,156 @@
+:root {
+    --clr-background: rgb(238, 238, 238);
+    --clr-trailer: rgb(82, 146, 214);
+    --clr-tickets: rgb(174, 183, 194);
+    --clr-trailer-hover: rgb(122, 186, 234);
+    --clr-tickets-hover: rgb(200, 200, 204);
+    --clr-trailer-active: rgb(52, 130, 214);
+    --clr-tickets-active: rgb(139, 140, 149);
+    --shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    --btn-offset: 2px;
+    --btn-translateY: translateY(-2px);
+    --btn-transition: 150ms;
+}
+
+body {
+    line-height: 1.3;
+    background-color: var(--clr-background);
+    padding: 1rem;
+}
+
+main {
+    grid-column: span 3;
+}
+.sidebar {
+    grid-column: span 3;
+}
+
+.card {
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content p {
+    font-size: 1.05rem;
+}
+
+.card img {
+    height: 15rem;
+    object-fit: contain;
+}
+
+.btn {
+    margin-bottom: 0.25rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    letter-spacing: 0.06rem;
+    font-weight: 600;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.trailer {
+    background-color: var(--clr-trailer);
+}
+
+.ticket {
+    background-color: var(--clr-tickets);
+    text-transform: uppercase;
+}
+
+.trailer:hover {
+    background-color: var(--clr-trailer-hover);
+    transform: var(--btn-translateY);
+    transition-duration: var(--btn-transition);
+}
+
+.ticket:hover {
+    background-color: var(--clr-tickets-hover);
+    transform: var(--btn-translateY);
+    transition-duration: var(--btn-transition);
+}
+
+.trailer:focus {
+    outline: 3px solid rgb(82, 146, 214, 0.5);
+    outline-offset: var(--btn-offset);
+}
+
+.ticket:focus {
+    outline: 3px solid rgb(174, 183, 194, 0.5);
+    outline-offset: var(--btn-offset);
+}
+
+.trailer:active {
+    background-color: var(--clr-trailer-active);
+}
+
+.ticket:active {
+    background-color: var(--clr-tickets-active);
+}
+
+html {
+    container-type: inline-size;
+    container-name: html;
+}
+
+body {
+    container-type: inline-size;
+    container-name: body;
+}
+
+main,
+.sidebar {
+    container-type: inline-size;
+    container-name: main-sidebar;
+}
+
+@container html (min-width: 560px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+    }
+}
+
+@container html (min-width: 750px) {
+    body {
+        line-height: 1.5;
+    }
+    .content p {
+        font-size: 1.1rem;
+    }
+    main {
+        grid-column: span 4;
+    }
+    .sidebar {
+        grid-column: span 2;
+    }
+}
+
+@container main-sidebar (min-width: 600px) {
+    .card {
+        flex-direction: row;
+    }
+}
+
+@container body (min-width: 1280px) {
+    main {
+        grid-column: span 3;
+    }
+    .sidebar {
+        grid-column: span 3;
+    }
+}
