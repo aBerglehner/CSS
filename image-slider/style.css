@@ -1,0 +1,76 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+#image-container {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    /*  Prevent image highlighting  */
+    user-select: none;
+}
+
+#image-container > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+#menu-background-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
+    background-position: 0% 0%;
+    background-size: 13vmin 13vmin;
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: opacity 800ms ease, background-size 800ms ease,
+        background-position 800ms ease;
+    z-index: -1;
+}
+
+#image-container:hover ~ #menu-background-pattern {
+    background-size: 12vmin 12vmin;
+    opacity: 0.7;
+}
+
+#wrapper[data-active-index='0'] > #menu-background-pattern {
+    background-position: 0% -12.5%;
+}
+
+#wrapper[data-active-index='1'] > #menu-background-pattern {
+    background-position: 0% -25%;
+}
+
+#wrapper[data-active-index='2'] > #menu-background-pattern {
+    background-position: 0% -37.5%;
+}
+
+#wrapper[data-active-index='3'] > #menu-background-pattern {
+    background-position: 0% -50%;
+}
+
+#wrapper[data-active-index='4'] > #menu-background-pattern {
+    background-position: 0% -62.5%;
+}
+
+#wrapper[data-active-index='5'] > #menu-background-pattern {
+    background-position: 0% -75%;
+}
+
+#wrapper[data-active-index='6'] > #menu-background-pattern {
+    background-position: 0% -87.5%;
+}
+
+#wrapper[data-active-index='6'] > #menu-background-pattern {
+    background-position: 0% -100%;
+}
