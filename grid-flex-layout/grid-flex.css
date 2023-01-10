@@ -92,9 +92,6 @@ footer {
     .main-content {
         justify-content: space-evenly;
     }
-    .main-content p:first-child {
-        align-self: flex-end;
-    }
     .sidebar {
         align-items: center;
     }
