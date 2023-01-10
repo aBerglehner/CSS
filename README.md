@@ -18,6 +18,9 @@ grid-flex-layout:
 grid-vim-book:
 [Live version](https://codepen.io/aberglehner/pen/GRGdwmY)
 
+image-slider:
+[Live version](https://codepen.io/aberglehner/pen/vYaOJYN)
+
 login-flex-layout:
 [Live version](https://codepen.io/aberglehner/pen/YzveNvm)
 
