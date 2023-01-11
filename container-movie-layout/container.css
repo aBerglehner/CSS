@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --clr-background: rgb(238, 238, 238);
     --clr-trailer: rgb(82, 146, 214);
@@ -12,6 +13,7 @@
     --btn-transition: 150ms;
 }
 
+/* layout styles */
 body {
     line-height: 1.3;
     background-color: var(--clr-background);
@@ -43,7 +45,7 @@ main {
 }
 
 .content p {
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 
 .card img {
@@ -130,7 +132,7 @@ main,
         line-height: 1.5;
     }
     .content p {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
     main {
         grid-column: span 4;
@@ -152,5 +154,8 @@ main,
     }
     .sidebar {
         grid-column: span 3;
+    }
+    .content p {
+        font-size: 1.1rem;
     }
 }
